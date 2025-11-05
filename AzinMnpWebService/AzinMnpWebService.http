@@ -1,0 +1,6 @@
+@AzinMnpWebService_HostAddress = http://localhost:5222
+
+GET {{AzinMnpWebService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
