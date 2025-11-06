@@ -15,7 +15,10 @@ public class AuthKeyService : IAuthKeyService
         _mongoRepository = mongoRepository;
         _requestLogCollection = "auth_key";
     }
-
+    public async Task<bool> ValidateAuthKeyAsync(string key)
+    {
+        return await _mongoRepository.AuthKeyExistsAsync(_requestLogCollection,Extension.SHA1Special(key));
+    }
     public async Task<string> GenerateAuthKey(string prefix)
     {
         var randomBytes = new byte[128];
@@ -29,7 +32,7 @@ public class AuthKeyService : IAuthKeyService
     public async Task<CreateAuthKey> Create(RequestAuthKey request)
     {
         var authkey = new CreateAuthKey { AuthKey = Extension.SHA1Special(request.AuthKey!), IsActive = true, CreatedAt = DateTime.Now };
-        return await _mongoRepository.InsertRecordAsync(_requestLogCollection, authkey);
+        return await _mongoRepository.InsertAuthKeyAsync(_requestLogCollection, authkey);
     }
 
     public async Task<CreateAuthKey> Update(Guid id, RequestAuthKey request)
@@ -44,6 +47,6 @@ public class AuthKeyService : IAuthKeyService
 
     public async Task<List<CreateAuthKey>> AllAuthKey()
     {
-        return await _mongoRepository.LoadRecordsAsync<CreateAuthKey>(_requestLogCollection);
+        return await _mongoRepository.LoadAuthKeyAsync<CreateAuthKey>(_requestLogCollection);
     }
 }

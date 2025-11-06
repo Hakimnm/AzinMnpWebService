@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AzinMnpWebService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5d4db520f2773c7771c8fb6c49675e44e826082f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f63e2d4f624b68a4635af3383fa4e0eef8e314bb")]
 [assembly: System.Reflection.AssemblyProductAttribute("AzinMnpWebService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AzinMnpWebService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

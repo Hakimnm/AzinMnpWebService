@@ -39,7 +39,7 @@ public class LoggingService
             RequestIp = request.HttpContext.Connection.RemoteIpAddress?.ToString()
         };
 
-        return await _mongoRepository.InsertRecordAsync(_requestLogCollection, requestLog);
+        return await _mongoRepository.InsertAuthKeyAsync(_requestLogCollection, requestLog);
     }
 
     private async Task<string> GetRequestBody(HttpContext httpContext)

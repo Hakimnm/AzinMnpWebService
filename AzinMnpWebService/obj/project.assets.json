@@ -1067,23 +1067,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {},
+    "C:\\Users\\hakim.mammadzada\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Admin-Bridge\\AzinMnpWebService\\AzinMnpWebService\\AzinMnpWebService.csproj",
+      "projectUniqueName": "C:\\Users\\hakim.mammadzada\\Desktop\\AzinBridge_New\\AzinMnpWebService\\AzinMnpWebService\\AzinMnpWebService.csproj",
       "projectName": "AzinMnpWebService",
-      "projectPath": "D:\\Admin-Bridge\\AzinMnpWebService\\AzinMnpWebService\\AzinMnpWebService.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "D:\\Admin-Bridge\\AzinMnpWebService\\AzinMnpWebService\\obj\\",
+      "projectPath": "C:\\Users\\hakim.mammadzada\\Desktop\\AzinBridge_New\\AzinMnpWebService\\AzinMnpWebService\\AzinMnpWebService.csproj",
+      "packagesPath": "C:\\Users\\hakim.mammadzada\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\hakim.mammadzada\\Desktop\\AzinBridge_New\\AzinMnpWebService\\AzinMnpWebService\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\hakim.mammadzada\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -1110,7 +1110,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.200"
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net9.0": {
@@ -1152,7 +1152,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

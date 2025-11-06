@@ -1,10 +1,13 @@
-﻿using AzinMnpWebService.Models.Request;
+﻿using AzinMnpWebService.Filters;
+using AzinMnpWebService.Models.Request;
 using AzinMnpWebService.Models.Response;
 using AzinMnpWebService.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AzinMnpWebService.Controllers;
 
+[AuthKeyRequired]
+[ServiceFilter(typeof(AuthKeyValidationFilter))]
 public class MnpController : ApiController
 {
     private readonly MnpSoapService _soapService;

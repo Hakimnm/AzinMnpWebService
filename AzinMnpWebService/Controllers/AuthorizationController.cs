@@ -18,26 +18,26 @@ public class AuthorizationController: ApiController
         return await _authKeyService.GenerateAuthKey(prefix);
     }
     
-    [HttpGet,Route("/getAll")]
+    [HttpGet]
     public async Task<List<CreateAuthKey>> GetList()
     {
         var result = await _authKeyService.AllAuthKey();
         return result;
     }
-    [HttpPost,Route("/create")]
+    [HttpPost]
     public async Task<CreateAuthKey> CerateAuthKey([FromBody] RequestAuthKey requestAuthKey)
     {
         var result = await _authKeyService.Create(requestAuthKey);
         return result;
     }
-    [HttpPut,Route("/update")]
+    [HttpPut]
     public async Task<CreateAuthKey> UpdateAuthKey([FromQuery] Guid id ,[FromBody] RequestAuthKey requestAuthKey)
     {
         var result = await _authKeyService.Update(id,requestAuthKey);
         return result;
     }
     
-    [HttpDelete,Route("/delete")]
+    [HttpDelete]
     public async Task<CreateAuthKey> DeleteAuthKey([FromQuery] Guid id)
     {
         var result = await _authKeyService.Delete(id);

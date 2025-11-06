@@ -1,4 +1,5 @@
 ﻿using AzinMnpWebService.Common;
+using AzinMnpWebService.Models.Request.AuthKey;
 using MongoDB.Bson;
 using MongoDB.Driver;
 
@@ -16,19 +17,28 @@ public class MongoRepository : IMongoRepository
         _database = client.GetDatabase(dbName);
     }
 
-    public async Task<T> InsertRecordAsync<T>(string table, T record)
+    public async Task<T> InsertAuthKeyAsync<T>(string table, T record)
     {
         var collection = _database.GetCollection<T>(table);
         await collection.InsertOneAsync(record);
         return record;
     }
 
-    public async Task<List<T>> LoadRecordsAsync<T>(string table)
+    public async Task<List<T>> LoadAuthKeyAsync<T>(string table)
     {
         var collection = _database.GetCollection<T>(table);
         var filter = Builders<T>.Filter.Eq("IsActive", true);
 
         return await collection.Find(filter).ToListAsync();
+    }
+
+    public async Task<bool> AuthKeyExistsAsync(string table,string authKey)
+    {
+        var collection = _database.GetCollection<CreateAuthKey>(table);
+        var filter = Builders<CreateAuthKey>.Filter.Eq(x => x.AuthKey, authKey);
+        var count = await collection.CountDocumentsAsync(filter);
+        return count > 0;
+
     }
 
     public async Task<T> UpdateAuthKeyAsync<T>(string table, Guid id, string newKey)
